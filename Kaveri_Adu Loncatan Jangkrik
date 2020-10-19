@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main (){
+    int n,i,width,length;
+
+    scanf("%d",&n);
+    int volume[n],height[n];
+
+    for(i=0;i<n;i++){
+        scanf("%d %d %d", &length,&width,&height[i]);
+        volume[i] = length*width*height[i];
+    }
+
+    for (i=0;i<n;i++){
+        if (height[i]<41)
+            printf("%d\n", volume[i]);
+        else
+			return 0;
+        }
+    
+    return 0;
+}
