@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main (){
+    int X1,X2,V1,V2;
+    
+    scanf("%d %d %d %d",&X1,&V1,&X2,&V2);
+
+    //memeriksa input
+    if (X1>=X2 || X1>1000 || X1<0 || X2<0 || X2>1000 || V1>1000 || V1<=0 || V2>1000 || V2<=0)
+        printf("Invalid Input, Please Try Again\n");
+    else if (V1<=V2)
+        printf("NO!\n"); //kalo x1<x2 njuk v1<=v2 gabakal ketemu woy
+    else
+    {
+        while (X1<X2){
+            X1+=V1;
+            X2+=V2;
+            printf("X1=%d dan X2=%d\n",X1,X2);
+        }
+        if (X1==X2)
+            printf("YES\n");
+        else //berarti gak ketemu
+            printf("NO!\n");
+        
+    }
+    return 0;
+}
